@@ -22,15 +22,21 @@
             border-radius: 30px;
         }
         .input-box{
-            
+            font-size: 20px;
             width: 220px;
             margin: 10px auto;
+        }
+        .result{
+            margin: 0;
+            padding: 0;
+            font-size: 35px;
         }
         .submit-btn{
         
             width: 150px;
-            margin-top: 40px;
+            margin-top: 60px;
             font-size: 22px;
+            margin-top: 70px;
         }
         .btn{
             height: 35px;
@@ -42,10 +48,24 @@
 <body>
     <div class="container">
         <h2 class="heading">Sum of two number</h2>
-        <button type="number" class="input-box btn"></button>
-        <button type="number" class="input-box btn"></button>
-        <button type="number" class="submit-btn btn">Calculate</button><br>
+        <input type="text" class="input-box btn" id="num1"></button>
+        <input type="text" class="input-box btn" id="num2"></button>
+        <p id="result" class="result">
+            
+        </p>
+        <button type="number" class="submit-btn btn" onclick="sumcal()">
+            Calculate
+        </button><br>
 
     </div>
+    <script>
+        function sumcal(){
+        const n1= document.getElementById("num1")
+       const n2= document.getElementById("num2")
+       const sum = parseInt(n1.value) + parseInt(n2.value)
+       const resultElement=document.getElementById("result")
+       resultElement.innerText = `Sum = ${sum}`
+        }
+    </script>
 </body>
 </html>
