@@ -32,11 +32,11 @@
             font-size: 35px;
         }
         .submit-btn{
-        
-            width: 150px;
+            width: 130px;
             margin-top: 60px;
             font-size: 22px;
             margin-top: 70px;
+            margin-bottom: 20px;
         }
         .btn{
             height: 35px;
@@ -48,23 +48,35 @@
 <body>
     <div class="container">
         <h2 class="heading">Sum of two number</h2>
-        <input type="text" class="input-box btn" id="num1"></button>
-        <input type="text" class="input-box btn" id="num2"></button>
+        <input type="text" class="input-box btn" id="num1" onkeyup="sumcal()"></button>
+        <input type="text" class="input-box btn" id="num2" onkeyup="sumcal()"></button>
         <p id="result" class="result">
-            
         </p>
-        <button type="number" class="submit-btn btn" onclick="sumcal()">
-            Calculate
-        </button><br>
+        <div>
+    
+        <button type="button" class="submit-btn btn" onclick="Reset()">
+            Reset
+        </button>
+        
+    </div>
 
     </div>
     <script>
         function sumcal(){
-        const n1= document.getElementById("num1")
+       const n1= document.getElementById("num1")
        const n2= document.getElementById("num2")
-       const sum = parseInt(n1.value) + parseInt(n2.value)
+       const sum = parseInt(n1.value || 0) + parseInt(n2.value || 0)
        const resultElement=document.getElementById("result")
        resultElement.innerText = `Sum = ${sum}`
+        }
+        function Reset(){
+       const n1= document.getElementById("num1")
+       n1.value=""
+       const n2= document.getElementById("num2")
+       n2.value=""
+       const resultElement=document.getElementById("result")
+       resultElement.innerText = ""
+
         }
     </script>
 </body>
