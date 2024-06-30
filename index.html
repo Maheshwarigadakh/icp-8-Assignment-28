@@ -6,21 +6,45 @@
     <title>calculate sum</title>
     <style>
         .container{
+            border: 1px solid black;
+            margin: auto 35%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
         .heading{
+            padding: 5px 25px;
+            background-color: pink;
+            border: 1px solid black;
             text-align: center;
+            font-size: 40px;
+            border-radius: 30px;
+        }
+        .input-box{
+            
+            width: 220px;
+            margin: 10px auto;
+        }
+        .submit-btn{
+        
+            width: 150px;
+            margin-top: 40px;
+            font-size: 22px;
+        }
+        .btn{
+            height: 35px;
+            border-radius: 30px;
+            background-color: pink;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2 class="heading">Caculate sum of two number</h2>
-        <button type="number" class="input-box"></button>
-        <button type="number" class="input-box"></button>
-        <button type="number" class="submit-btn"></button>
+        <h2 class="heading">Sum of two number</h2>
+        <button type="number" class="input-box btn"></button>
+        <button type="number" class="input-box btn"></button>
+        <button type="number" class="submit-btn btn">Calculate</button><br>
 
     </div>
 </body>
